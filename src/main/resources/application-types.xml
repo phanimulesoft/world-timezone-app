@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="failedorderspayload" format="json">
+      <types:shape format="weave" example="examples/Orderspayload.json"><![CDATA[%dw 2.0
+
+type failedorderspayload = {|
+  code: Number {"typeId": "int"}, 
+  uuid: String, 
+  errors: Array<{|    order_num: Number {"typeId": "double"},     order_id: Number {"typeId": "int"},     field: String,     error: String  |}>
+|} {"example": "{\\\"code\\\":400,\\\"uuid\\\":\\\"f7dab9ca-3e8a-4725-9a79-dbb107b742c8\\\",\\\"errors\\\":[{\\\"order_num\\\":4000011000,\\\"order_id\\\":1283258935,\\\"field\\\":\\\"user_email\\\",\\\"error\\\":\\\"invalid format\\\"},{\\\"order_num\\\":4000011000,\\\"order_id\\\":1283258935,\\\"field\\\":\\\"user_email\\\",\\\"error\\\":\\\"invalid order id\\\"}]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+</types:mule>

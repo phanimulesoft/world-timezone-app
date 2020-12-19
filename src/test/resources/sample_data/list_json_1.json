@@ -1,0 +1,18 @@
+{
+    "code": 400,
+    "uuid": "f7dab9ca-3e8a-4725-9a79-dbb107b742c8",
+    "errors": [
+        {
+            "order_num": 4000011000,
+            "order_id": 1283258935,
+            "field": "user_email",
+            "error": "invalid format"
+        },
+        {
+            "order_num": 4000011000,
+            "order_id": 1283258935,
+            "field": "user_email",
+            "error": "invalid order id"
+        }
+    ]
+}
